@@ -1,0 +1,338 @@
+$primary-green: #9BF8B2;
+$primary-black: #282c34;
+$primary-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;;
+
+.primary-btn {
+  background-color: $primary-green;
+  border-radius: 0.5em;
+  color: $primary-black;
+  border: none;
+  transition-duration: 0.5s;
+  font-size: 1.5em; 
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+.primary-box {
+  background-color: $primary-black;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: $primary-green;
+  border: none;
+  font-size: 1em; 
+  display: flex;
+  gap: 1em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $primary-black;
+    font-family: $primary-font-family;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+.App {
+    margin: 0;
+    padding: 0;
+    gap: calc(10px + 2vh);
+    text-align: center;
+    background-color: $primary-black;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.navbar {
+  background-color: $primary-green;
+  box-shadow: 2px 2px 2px 2px $primary-green;
+  display: flex;
+  height: auto;
+  max-height: 10vh;
+  min-height: 4em;
+  width: 100%;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+  svg {
+    padding: 0.5em;
+  }
+  button {
+    @extend .primary-btn;
+    font-size: 120%; 
+  }
+  button:hover {
+    @extend .primary-btn;
+    font-size: 130%; 
+    background-color: $primary-black;
+    color: $primary-green;
+    transition-duration: 0.5s;
+  }
+}
+
+.loading-screen {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $primary-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
+  button {
+    @extend .primary-btn;
+    background-color: $primary-green;
+    color: $primary-black;
+    padding: 0;
+    height: auto;
+  }
+}
+  
+.about-box {
+  @extend .primary-box;
+}
+
+.about-text {
+  margin: 0;
+  padding-top: 1em;
+  h1 {
+    margin: 0;
+    font-size: calc(1.5em + 0.8vw);
+    line-height: 1.5em;
+  }
+  p {
+    text-align: justify;
+    font-size: calc(0.75em + 0.4vw);
+  }
+}
+
+.lang-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  img {
+    max-height: 4em;
+    max-width: 25%;
+    height: auto;
+    width: auto;
+  }
+}
+
+.packet-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  img {
+    max-height: 2em;
+    max-width: 25%;
+    height: auto;
+    width: auto;
+  }
+}
+
+.project-box {
+  background-color: $primary-green;
+  border-radius: 0.5em;
+  min-height: 26.5em;
+  width: 20em;
+  color: $primary-black;
+  border: none;
+  font-size: 1em; 
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  h1 {
+    margin: 0.5em;
+    font-size: 1.5em;
+  }
+  .tools {
+    display: flex;
+    gap: 0.5em;
+    padding-bottom: 0.5em;
+    div {
+      background-color: $primary-black;
+      border-radius: 0.5em;
+      color: $primary-green;
+      border: none;
+      font-size: 0.8em; 
+      padding: 0.5em;
+    }
+  }
+  img {
+    height: 15em;
+    width: 15em;
+    border-radius: 0.5em;
+    border-color: $primary-black;
+    border-width: 0.2em;
+    border-style: solid;
+  }
+  p {
+    text-align: justify;
+    margin: 0.5em;
+  }
+  .links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    a {
+      @extend .primary-btn;
+      text-decoration: none;
+      background-color: $primary-black;
+      color: $primary-green;
+      font-size: 1em;
+    }
+    a:hover {
+      @extend .primary-btn;
+      text-decoration: none;
+      transition-duration: 0.5s;
+      font-size: 1em;
+    }
+  }
+}
+
+.contact-box {
+  @extend .primary-box;
+  width: 80vh;
+  max-width: 90vw;
+  max-height: 86vh;
+  min-height: 80vh;
+  padding: 1em;
+  flex-direction: column;
+  form {
+    @extend .primary-box;
+    flex-direction: column;
+    min-width: 50vw;
+    max-width: 90vw;
+    max-height: 85vh;
+    font-size: 1.2em;
+    :focus {
+      outline: none;
+    }
+    input {
+      width: 90%;
+      max-height: 20%;
+      background-color: $primary-black;
+      border-color: $primary-green;
+      border-radius: 0.5em;
+      color: $primary-green;
+      border-width: 0.2em;
+      padding: 1em;
+      font-family: $primary-font-family;
+    }
+    textarea {
+      width: 90%;
+      min-height: 30%;
+      max-height: 50%;
+      background-color: $primary-black;
+      border-color: $primary-green;
+      border-radius: 0.5em;
+      color: $primary-green;
+      border-width: 0.2em;
+      padding: 1em;
+      font-family: $primary-font-family;
+    }
+    button {
+      @extend .primary-btn;
+      font-size: 1em;
+    }
+    button:hover {
+      @extend .primary-btn;
+      background-color: $primary-black;
+      color: $primary-green;
+      transition-duration: 0.5s;
+      font-size: 1em;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: $primary-green;
+  font-family: $primary-font-family;
+}
+
+
+//Media Queries
+
+@media only screen and (min-width: 620px) {
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: calc(1em + 1vh);
+    padding: 0;
+    height: 100%;
+    max-width: 50%;
+  }
+
+  .portrait {
+    height: 86vh;
+    min-height: 20em;
+    width: auto;
+  }
+
+  .portfolio-box {
+    background-color: $primary-black;
+    margin: 0;
+    padding: 0;
+    color: $primary-green;
+    border: none;
+    font-size: 1em; 
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+    height: 86vh;
+    min-height: 29em;
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: calc(1em + 1vh);
+    padding: 0;
+    height: 100%;
+    max-width: 90%;
+  }
+
+  .portrait {
+    display: none;
+  }
+
+  .portfolio-box {
+    background-color: $primary-black;
+    margin: 0;
+    padding: 0;
+    color: $primary-green;
+    border: none;
+    font-size: 1em; 
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: center;
+    height: 86vh;
+    min-height: 62em;
+    width: 100vw;
+    flex-direction: column;
+  }
+
+}
