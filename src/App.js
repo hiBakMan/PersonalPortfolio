@@ -24,9 +24,9 @@ const App = () => {
         <NavBar key="navbar"/>
         <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.key}>
-          <Route path="personalportfolio/" element={<AboutBox />} />
-          <Route path="personalportfolio/portfolio" element={<PortfolioBox />} />
-          <Route path="personalportfolio/contact" element={<ContactBox />} />
+          <Route path="PersonalPortfolio/" element={<AboutBox />} />
+          <Route path="PersonalPortfolio/portfolio" element={<PortfolioBox />} />
+          <Route path="PersonalPortfolio/contact" element={<ContactBox />} />
         </Routes>
         </AnimatePresence>
       </div>}
